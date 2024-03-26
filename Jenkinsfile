@@ -5,28 +5,31 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Git checkout
-                git 'https://github.com/JonasWolfram/spring-boot-blog-rest-api.git'
+                echo 'Checkout Stage'
             }
         }
 
         stage('Build') {
             steps {
                 // Maven build
-                sh 'mvn clean package'
+                // sh 'mvn clean package'
+                echo 'Build Stage'
             }
         }
 
         stage('Test') {
             steps {
                 // Run tests
-                sh 'mvn test'
+                // sh 'mvn test'
+                echo 'Test Stage'
             }
         }
 
         stage('Deploy') {
             steps {
                 // Copy artifact to deployment directory
-                sh 'cp target/*.jar /path/to/deployment/directory'
+                // sh 'cp target/*.jar /path/to/deployment/directory'
+                echo 'Deploy Stage'
             }
         }
     }
