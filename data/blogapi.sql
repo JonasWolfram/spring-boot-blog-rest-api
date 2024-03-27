@@ -1,0 +1,4 @@
+USE blog
+
+UNLOCK TABLES;
+
